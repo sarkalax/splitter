@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="./app/style/style.css">
+</head>
+<body>
+<div class="app">
+  <h2>Spli<br>tter</h2>
+  <div class="wrapper">
+    <div class="partOne">
+      <fieldset>
+        <label for="bill">Bill</label>
+        <small class="errorMess1 hidden">Can't be zero</small>
+        <input type="text" name="bill" value="0" id="bill" pattern="[0-9]+" oninput="Calculate()">
+        <span class="icons">$</span>
+      </fieldset>
+
+      <fieldset>
+        <label for="tips">Select tips</label>
+        <div class="tips">
+          <button class="bttnTips" value="5">5%</button>
+          <button class="bttnTips" value="10">10%</button>
+          <button class="bttnTips" value="15">15%</button>
+          <button class="bttnTips" value="25">25%</button>
+          <button class="bttnTips" value="50">50%</button>
+          <input type="text" name="customTip" id="customTip" class="bttnTips" pattern="[0-9]+" placeholder="custom">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <label for="numbPeople">Number of people</label>
+        <small class="errorMess2 hidden">Can't be zero</small>
+        <input type="text" name="numbPeople" id="numbPeople" value="1" pattern="[0-9]+" oninput="Calculate()">
+        <span><img src="images/person-svgrepo-com.svg" class="icons"></span>
+      </fieldset>
+    </div>
+
+    <div class="partTwo">
+      <ul>
+        <li><span>Tip amount <br><small>/ person</small></span>
+        <small id="tip"></small></li>
+        <li><span>Total <br><small>/ person</small></span>
+        <small id="total" value="0"></span></li>
+      </ul>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="./app/js/script.js"></script>
+</body>
+</html>
