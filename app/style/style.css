@@ -160,7 +160,4 @@ input[type=text]:invalid {
         gap: 2rem;
         grid-template-columns: 1fr;
     }
-    body {
-        background-color: rgb(255, 127, 229);
-    }
 }
